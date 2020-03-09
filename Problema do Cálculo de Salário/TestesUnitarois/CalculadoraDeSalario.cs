@@ -14,21 +14,11 @@ namespace Problema_do_Cálculo_de_Salário.TestesUnitarois
 
         private double CalculaSalario(Funcionario funcionario)
         {
-            if (funcionario.Cargo.Equals(Cargo.DESENVOLVEDOR))
+            if (funcionario.Salario > 3000)
             {
-                if (funcionario.Salario > 3000)
-                {
-                    return 3200.0;
-                }
-                else
-                {
-                    return 1350.0;
-                }
+                return funcionario.Salario * 0.9;
             }
-            else
-            {
-                return 425.0;
-            }
+            return funcionario.Salario * 0.9;
         }
 
         [Test]
